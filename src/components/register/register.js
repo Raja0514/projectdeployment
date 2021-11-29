@@ -32,6 +32,8 @@ if(name&&email&&password&&(password===reEnterpassword)){
 
 //axios.post("http://localhost:3002/register",user)
 
+//axios.post("https://raksha05145.herokuapp.com/register",user)
+
 axios.post("https://raksha05145.herokuapp.com/register",user)
 
 .then(res=>{
