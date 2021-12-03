@@ -1,27 +1,22 @@
 import "./loginthrough.css";
-
 const clientid = "";
-
 const LoginTh = () => {
-  const google = (res) => {
-    console.log(res);
-  };
-
+  const google = (res) => {};
   const facebook = () => {};
-
   const github = () => {};
-
   return (
     <div className="new">
-      <button onClick={google}>Google</button>
-      <br></br>
-
-      <button onClick={facebook}>Facebook</button>
-      <br></br>
-
-      <button onClick={github}>Github</button>
+      <h2>Login Through</h2>
+      <div className="button " onClick={google}>
+        Google
+      </div>
+      <div className="button" Click={facebook}>
+        Facebook
+      </div>
+      <div className="button" onClick={github}>
+        Github
+      </div>
     </div>
   );
 };
-
 export default LoginTh;

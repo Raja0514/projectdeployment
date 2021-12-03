@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
-
-
-
 import { useHistory } from "react-router";
-
-const Login = ({setLoginUser}) => {
-
-  const history=useHistory();
-
-  const [user, setuser] = useState({
+const Login = ({ setLoginUser }) => {
+ const history = useHistory();
+ const [user, setuser] = useState({
     email: "",
     password: "",
   });
@@ -21,30 +15,25 @@ const Login = ({setLoginUser}) => {
       [name]: value,
     });
   };
+ const login = () => {
+  const { email, password } = user;
 
-const login=()=>{
+    //axios.post("http://localhost:3002/login",user)
 
-  const{email,password}=user
+    //axios.post("https://raksha05145.herokuapp.com/login",user)
 
-  //axios.post("http://localhost:3002/login",user)
+    axios.post("https://raksha05145.herokuapp.com/login", user)
 
-  //axios.post("https://raksha05145.herokuapp.com/login",user)
-
-  axios.post("https://raksha05145.herokuapp.com/login",user)
-
-  .then(res=>{alert(res.data.message)
-                
-  setLoginUser(res.data.user)
-       history.push("/")  
-  });
-}
-
-
-
-  return (
+      .then((res) => {
+        alert(res.data.message);
+        setLoginUser(res.data.user);
+        history.push("/");
+      });
+  };
+ return (
     <div className="login">
       {console.log(user)}
-      <h1>Login</h1>
+      <h2>Login</h2>
       <input
         name="email"
         value={user.email}
@@ -59,13 +48,10 @@ const login=()=>{
         placeholder="Your Password"
         onChange={handlechange}
       ></input>
-      <div className="button" onClick={login}>Login</div>
-    
-
-      
-
+      <div className="button" onClick={login}>
+        Login
+      </div>
     </div>
   );
 };
-
 export default Login;

@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Homepage from "./components/homepage/homepage";
 import Login from "./components/login/login";
 import Register from "./components/register/register";
@@ -14,13 +9,20 @@ function App() {
   const [user, setLoginUser] = useState({});
   return (
     <div className="App">
-      <h1> Marble and Granite collectios</h1>
       <Router>
-        <NavLink to="/">login</NavLink>
-        <NavLink to="/register">Register</NavLink>
-        <NavLink to="/loginthrough">OAuthentication</NavLink>
+        <div className="align">
+          <Link to="/" activeClassName="newclass" exact={true}>
+            Login
+          </Link>
+          <Link to="/register" activeClassName="newclass">
+            Register
+          </Link>
+          <Link to="/loginthrough" activeClassName="newclass">
+            OAuthentication
+          </Link>
+        </div>
         <br></br>
-         <Switch>
+        <Switch>
           <Route exact path="/">
             {user && user._id ? (
               <Homepage setLoginUser={setLoginUser} />
@@ -34,7 +36,7 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
-           <Route path="/loginthrough">
+          <Route path="/loginthrough">
             <LoginTh />
           </Route>
         </Switch>

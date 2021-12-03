@@ -1,14 +1,19 @@
-.register {
-  width: 500px;
+.register 
+  {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
   background: darkcyan;
   border: 1px solid #ffff;
-  box-shadow: 0 2px rgb(0 0 / 10%), 0 8px 16 px rgb(0 0 0/10%);
   padding: 1rem;
-  align-items: center;
   text-align: center;
   color: brown;
+  font-family: 'Courier New', Courier, monospace;
 }
-.register > input {
+.register > input 
+{
   border-radius: 8px;
   border: 2px solid #dddfe2;
   outline: none;
@@ -18,7 +23,8 @@
   width: 92%;
   font-size: 1rem;
 }
-.register > .button {
+.register > .button
+ {
   background: #fff;
   border: 1px solid gray;
   font-size: 1.25rem;

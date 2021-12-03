@@ -25,7 +25,8 @@ const Register = () => {
 
       //axios.post("https://raksha05145.herokuapp.com/register",user)
 
-      axios.post("https://raksha05145.herokuapp.com/register", user)
+      axios
+        .post("https://raksha05145.herokuapp.com/register", user)
 
         .then((res) => {
           alert(res.data.message);
@@ -38,7 +39,7 @@ const Register = () => {
   };
   return (
     <div className="register">
-      <h1>Register</h1>
+      <h2>Register</h2>
       <input
         name="name"
         value={user.name}
