@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-
 import "./register.css";
-
 import axios from "axios";
-
 import { useHistory } from "react-router";
-
 const Register = () => {
-
-const history=useHistory();
-
+  const history = useHistory();
   const [user, setuser] = useState({
     name: "",
     email: "",
@@ -23,34 +17,26 @@ const history=useHistory();
       [name]: value,
     });
   };
+  const register = () => {
+    const { name, email, password, reEnterpassword } = user;
 
-const register=()=>{
+    if (name && email && password && password === reEnterpassword) {
+      //axios.post("http://localhost:3002/register",user)
 
-const{name,email,password,reEnterpassword}=user
+      //axios.post("https://raksha05145.herokuapp.com/register",user)
 
-if(name&&email&&password&&(password===reEnterpassword)){
+      axios.post("https://raksha05145.herokuapp.com/register", user)
 
-//axios.post("http://localhost:3002/register",user)
+        .then((res) => {
+          alert(res.data.message);
 
-//axios.post("https://raksha05145.herokuapp.com/register",user)
-
-axios.post("https://raksha05145.herokuapp.com/register",user)
-
-.then(res=>{
-  alert(res.data.message)
-
-   history.push("/login")
-
-})
-
-}
-else{
-
-  alert("invalid user")
-}
-
-}
-return (
+          history.push("/login");
+        });
+    } else {
+      alert("invalid user");
+    }
+  };
+  return (
     <div className="register">
       <h1>Register</h1>
       <input
@@ -81,9 +67,9 @@ return (
         placeholder="Re-enter Password"
         onChange={handlechange}
       ></input>
-      <div className="button" onClick={register}>Register</div>
-      or
-      <div className="button" onClick={()=>history.push('/login')}>Login</div>
+      <div className="button" onClick={register}>
+        Register
+      </div>
     </div>
   );
 };

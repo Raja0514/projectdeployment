@@ -1,10 +1,11 @@
 .login {
     width: 450px;
-    background:#FFFF;
+    background:darkcyan;
     border: 1px solid #FFFF;
     padding: 1rem;
     align-items: center;
     text-align: center;
+    color:brown;
   }
   .login > input {
     border-radius: 8px;
@@ -17,7 +18,7 @@
     font-size: 1rem;
   }
   .login > .button {
-    background: gray;
+    background:#FFF;
     border: 1px solid gray;
     font-size: 1.25rem;
     padding: 0.5rem;

@@ -1,0 +1,15 @@
+.new{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:450px;
+    height:100px;
+    box-shadow: 0 0 15px grey;
+    background:darkcyan;
+    position: relative;
+    padding: 20px;
+    border: 1px solid white;
+    
+}
+

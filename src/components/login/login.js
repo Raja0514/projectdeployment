@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./login.css";
 import axios from "axios";
 
+
+
 import { useHistory } from "react-router";
 
 const Login = ({setLoginUser}) => {
@@ -33,11 +35,8 @@ const login=()=>{
   .then(res=>{alert(res.data.message)
                 
   setLoginUser(res.data.user)
-      
-    history.push("/")
-  
+       history.push("/")  
   });
-
 }
 
 
@@ -61,8 +60,10 @@ const login=()=>{
         onChange={handlechange}
       ></input>
       <div className="button" onClick={login}>Login</div>
-      or
-      <div className="button" onClick={()=>history.push('/register')}>Register</div>
+    
+
+      
+
     </div>
   );
 };
