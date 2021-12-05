@@ -12,6 +12,9 @@ const Homepage = ({ setLoginUser }) => {
          <div className="image">
 
         <img src=".\image\Marble.jpg" width="200px" height="200px" />
+
+        <img src=".\image\Marble.jpg" width="200px" height="200px" />
+        <img src=".\image\Marble.jpg" width="200px" height="200px" />
        
         </div>
 

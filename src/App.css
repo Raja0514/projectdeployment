@@ -6,26 +6,28 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color: thistle;
   flex-direction: column;
-  padding: 20px;
-  color: darkolivegreen;
-  height: 520px;
+  color:white;
+  height: 640px;
+
 }
 .newclass {
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
 }
 .align {
-  float: right;
   display: flex;
-  justify-content: space-around;
+  justify-content:space-evenly;
   align-items: center;
-  flex-direction: row-reverse;
-  width: 50%;
+  flex-direction: row;
+  width: 100%;
   font-size: 20px;
   font-weight: 200px;
+  background-color:brown;
+  font-family: 'Courier New', Courier, monospace;
+
 }
 a {
-  color: blue;
+  color:white;
   text-decoration: none;
   outline-style: none;
 }

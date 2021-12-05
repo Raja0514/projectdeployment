@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <div className="align">
+          <h3>marble collections</h3>
           <Link to="/" activeClassName="newclass" exact={true}>
             Login
           </Link>
